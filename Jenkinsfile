@@ -7,9 +7,7 @@ pipeline {
     stages {
        stage('Checkout') {
     steps {
-        git branch: 'main',
-            credentialsId: 'GitHub-Jenkins',
-            url: 'https://github.com/Faoziyah/NumberGuessGame.git'
+       git branch: 'main', credentialsId: 'GitHub-Jenkins', url: 'https://github.com/Faoziyah/NumberGuessGame.git'
     }
 }
         stage('Build') {
