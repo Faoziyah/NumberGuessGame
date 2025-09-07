@@ -5,11 +5,13 @@ pipeline {
         jdk 'jdk17'
     }
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/Faoziyah/NumberGuessGame.git'
-            }
-        }
+       stage('Checkout') {
+    steps {
+        git branch: 'main',
+            credentialsId: 'GitHub-Jenkins',
+            url: 'https://github.com/Faoziyah/NumberGuessGame.git'
+    }
+}
         stage('Build') {
             steps {
                 sh 'mvn clean package'
