@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Publish to Nexus') {
             steps {
-                sh 'mvn clean deploy -x'
+                sh 'mvn clean deploy'
             }
         }
         stage('Deploy to Tomcat') {
